@@ -1,0 +1,85 @@
+.header {
+  width: 100vw;
+  height: 200vh;
+  background: #000;
+}
+.header-main {
+  width: 100vw;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+.window-wall {
+  background-color: rgb(0, 0, 0);
+  width: 340px;
+  position: relative;
+  height: 436px;
+}
+.window {
+  width: 300px;
+  height: 400px;
+  position: relative;
+  background-image: url(../../Images/Night\ sky.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-position: center;
+}
+.window::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 400px;
+  width: 10px;
+  background-color: black;
+}
+.curtain-main {
+  position: absolute;
+  top: -250px;
+  z-index: 99;
+  left: 0;
+}
+
+.CurtainHeader {
+  background-image: url('../../Images/Component\ 2.png');
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -50px;
+  left: -15px;
+  z-index: 100;
+}
+.tale-star{
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  animation: talestar 5s infinite;
+}
+@keyframes talestar {
+  0%{
+    top: -14px;
+    right: -58px;
+  }
+  25%{
+    top: 258px;
+    right: 360px;
+  }
+  50%{
+    top: 25px;
+    right: 360px;
+    transform: rotateY(180deg);
+  }
+  75%{
+    top: 250px;
+    right: -100px;
+  }
+  100%{
+    top: -14px;
+    right: -58px;
+    rotate: 0deg;
+  }
+
+  
+}
