@@ -1,31 +1,24 @@
-import React ,{ useEffect, useState } from "react";
-import CurtainHeader from '../../Components/CurtainHeader';
-import CurtainMain from '../../Components/CurtainMain' ;
-import TaleStar from "../../Components/TaleStar";
-import './home.css' 
+import React from 'react'
+import './Home.scss'
 
 function Home() {
-    const [offsety, setoffsety] = useState(0);
-
-  useEffect(() => {
-    window.addEventListener("scroll", function (e) {
-      setoffsety(window.scrollY)
-    });
-  }, []);
-
-  return (
-    <div className="header">
-      <div className="header-main">
-        <div className="window-wall">
-          <div className="window">
-              <TaleStar/>
-            <CurtainMain offsety={offsety} />
-          </div>
-          <div className="CurtainHeader"></div>
-        </div>
-      </div>
-    </div>
-  );
+    return (
+       <div className="home">
+           <div className="navbar">
+               
+              .navbar-div
+           </div>
+           <div className="darkmode">
+                dark mode
+           </div>
+           <div className="title">
+               <h1>curtain house</h1>
+           </div>
+           <div className="curtain">
+               hoo
+           </div>
+       </div>
+    )
 }
 
-export default Home;
+export default Home
