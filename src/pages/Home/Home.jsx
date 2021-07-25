@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.scss";
 import CurtainMain from "../../Components/CurtainMain";
 
 function Home() {
+    const [darkmode, setDarkmode] = useState(false)
   return (
-    <div className="home">
+    <div className={darkmode? "home darkmode-checked" : "home"}>
       {/* navbar */}
 
       <div className="navbar">
@@ -18,7 +19,10 @@ function Home() {
       </div>
       <div className="darkmode">
         <h4>DARK MODE</h4>
-        <div></div>
+        {/* this div for the darkmode input */}
+        <div className="darkmode-div">
+            <input type="checkbox" onChange={(e)=>setDarkmode(e.target.checked)} value={darkmode}/>
+        </div>
       </div>
       <div className="title">
         <h1>CURTAIN HOUSE</h1>

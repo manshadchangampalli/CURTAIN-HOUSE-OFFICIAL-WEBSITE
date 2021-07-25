@@ -4,6 +4,7 @@
   display: grid;
   overflow-x: hidden;
   grid-template-columns: repeat(2, 1fr);
+  background-color: white;
   grid-template-rows: 1fr 86vh;
   .navbar {
     width: 100%;
@@ -19,84 +20,124 @@
       P {
         align-self: center;
         justify-self: center;
-        font-family: 'Exo 2', sans-serif;
+        font-family: "Exo 2", sans-serif;
         font-weight: 800;
-        color: #474747;
+        font-size: 20px;
+        color: #2b2b2b;
       }
     }
   }
   .darkmode {
-      align-self: center;
-      padding-right: 12rem;
-      justify-self: end;
-      h4{
-        font-family: 'Fredoka One', cursive;
-        color: #969696;
-      }
-  }
-  .title {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      h1{
-        font-family: 'Fredoka One', cursive;
-        font-size: 130px;
-        font-style: normal;
-        font-weight: normal;
-        margin-left: 0;
-        color: #283940;
-        width: 531px;
-        letter-spacing: .05rem;
-        line-height: 139px;
-      }
-  }
-  .curtain {
-      width: 100%;
-      height: 100%;
+    align-self: center;
+    padding-right: 11rem;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    h4 {
+      font-family: "Fredoka One", cursive;
+      color: #1f1f1f;
+      letter-spacing: .1rem;
+      margin-right: 1rem;
+      font-size: 20px;
+    }
+    .darkmode-div {
       display: grid;
       place-items: center;
-      .curtain-div{
-          width: 70%;
-          height: 90%;
-          background: rgb(0, 0, 0);
-          border-radius: 25px;
-          margin-right: 10%;
-          display: grid;
-          place-items: center;
-          box-shadow: -12px 13px 25px rgba(0, 0, 0, 0.39);
-          .curtain-header-div{
-
-            display: grid;
-            place-items: center;
-            position: relative;
-
-            .curtain-img{
-                position: relative;
-                background: url("../../Images/day\ image.png");
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                height: 400px;
-                overflow-y: hidden;
-                overflow-x: visible;
-                width: 300px;
-                .curtain-main{
-                    position: absolute;
-                }
-            }
-                .curtain-header{
-                  position: absolute;
-                  top: 0;
-                  left: -15px;
-                  z-index: 100;
-                  height:436px;
-                  width: 341px;
-                  background: url("../../Images/Component\ 2\ light.png");
-                }
-          
-          
+      input[type="checkbox"] {
+        width: 90px;
+        height: 42px;
+        position: relative;
+        transition: all 0.5s ease-in;
+        outline: none;
+        box-shadow: inset 0px 0px 5px#fff;
+        background-color: #283940;
+        -webkit-appearance: none;
+        border-radius: 20px;
+        &:checked {
+          background-color: white;
+          box-shadow: inset 0px 0px 5px rgb(0, 0, 0);
+          &::before {
+            left: 49px;
+            background: #000;
           }
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          transition: all 0.5s ease-in-out;
+          top: 2px;
+          left: 2px;
+          height: 38px;
+          width: 38px;
+          background: rgb(255, 255, 255);
+          border-radius: 50%;
+        }
       }
+    }
   }
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      font-family: "Fredoka One", cursive;
+      font-size: 130px;
+      font-style: normal;
+      font-weight: normal;
+      margin-left: 0;
+      color: #283940;
+      width: 531px;
+      letter-spacing: 0.05rem;
+      line-height: 139px;
+    }
+  }
+  .curtain {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    .curtain-div {
+      width: 70%;
+      height: 90%;
+      background: rgb(0, 0, 0);
+      border-radius: 25px;
+      margin-right: 10%;
+      display: grid;
+      place-items: center;
+      box-shadow: -12px 13px 25px rgba(0, 0, 0, 0.39);
+      .curtain-header-div {
+        display: grid;
+        place-items: center;
+        position: relative;
+
+        .curtain-img {
+          position: relative;
+          background: url("../../Images/day\ image.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 400px;
+          overflow-y: hidden;
+          overflow-x: visible;
+          width: 300px;
+          .curtain-main {
+            position: absolute;
+          }
+        }
+        .curtain-header {
+          position: absolute;
+          top: 0;
+          left: -15px;
+          z-index: 100;
+          height: 436px;
+          width: 341px;
+          background: url("../../Images/Component\ 2\ light.png");
+        }
+      }
+    }
+  }
+}
+.home.darkmode-checked{
+background: #000;
 }
