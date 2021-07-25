@@ -1,7 +1,102 @@
-.home{
-    height: 100vh;
-    width: 100vw;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr 86vh;
+.home {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  overflow-x: hidden;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 86vh;
+  .navbar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .navbar-div {
+      width: 70%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      P {
+        align-self: center;
+        justify-self: center;
+        font-family: 'Exo 2', sans-serif;
+        font-weight: 800;
+        color: #474747;
+      }
+    }
+  }
+  .darkmode {
+      align-self: center;
+      padding-right: 12rem;
+      justify-self: end;
+      h4{
+        font-family: 'Fredoka One', cursive;
+        color: #969696;
+      }
+  }
+  .title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      h1{
+        font-family: 'Fredoka One', cursive;
+        font-size: 130px;
+        font-style: normal;
+        font-weight: normal;
+        margin-left: 0;
+        color: #283940;
+        width: 531px;
+        letter-spacing: .05rem;
+        line-height: 139px;
+      }
+  }
+  .curtain {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      .curtain-div{
+          width: 70%;
+          height: 90%;
+          background: rgb(0, 0, 0);
+          border-radius: 25px;
+          margin-right: 10%;
+          display: grid;
+          place-items: center;
+          box-shadow: -12px 13px 25px rgba(0, 0, 0, 0.39);
+          .curtain-header-div{
+
+            display: grid;
+            place-items: center;
+            position: relative;
+
+            .curtain-img{
+                position: relative;
+                background: url("../../Images/day\ image.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 400px;
+                overflow-y: hidden;
+                overflow-x: visible;
+                width: 300px;
+                .curtain-main{
+                    position: absolute;
+                }
+            }
+                .curtain-header{
+                  position: absolute;
+                  top: 0;
+                  left: -15px;
+                  z-index: 100;
+                  height:436px;
+                  width: 341px;
+                  background: url("../../Images/Component\ 2\ light.png");
+                }
+          
+          
+          }
+      }
+  }
 }

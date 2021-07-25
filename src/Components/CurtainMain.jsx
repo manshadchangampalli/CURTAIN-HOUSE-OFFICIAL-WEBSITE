@@ -1,12 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-function CurtainMain({offsety}) {
-  console.log(offsety);
-  
+function CurtainMain() {
+  const [offsetY, setOffsetY] = useState()
+  useEffect(() => {
+    window.addEventListener("scroll",handleScroll)
+    
+  }, [])
+  function handleScroll(){
+    setOffsetY(window.scrollY)
+  }
+  console.log(offsetY);
+  var top
+  if(offsetY<=265){
+    top = {"top": offsetY-230+"px"}
+  }else if (offsetY > 265) {
+    top = {"top": 35+"px"}
+  } else{
+    top = {"top": -236+"px"}
+  }
  
-  
+  // for dark "#777777"
   return (
-    <div style={{"top": offsety<335? offsety-300 : 35+"px"}}  className="curtain-main ">
+    <div style={top}  className="curtain-main ">
       <svg
         width="300"
         height="371"
@@ -14,7 +29,7 @@ function CurtainMain({offsety}) {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <rect y="324" width="314" height="36" fill="#777777" />
+        <rect y="324" width="314" height="36" fill="#BEE9FC" />
         <rect
           y="288"
           width="314"
@@ -22,7 +37,7 @@ function CurtainMain({offsety}) {
           fill="#555555"
           fill-opacity="0.4"
         />
-        <rect y="252" width="314" height="36" fill="#777777" />
+        <rect y="252" width="314" height="36" fill="#BEE9FC" />
         <rect
           y="216"
           width="314"
@@ -30,7 +45,7 @@ function CurtainMain({offsety}) {
           fill="#555555"
           fill-opacity="0.4"
         />
-        <rect y="180" width="314" height="36" fill="#777777" />
+        <rect y="180" width="314" height="36" fill="#BEE9FC" />
         <rect
           y="144"
           width="314"
@@ -38,7 +53,7 @@ function CurtainMain({offsety}) {
           fill="#555555"
           fill-opacity="0.4"
         />
-        <rect y="108" width="314" height="36" fill="#777777" />
+        <rect y="108" width="314" height="36" fill="#BEE9FC" />
         <rect
           y="72"
           width="314"
@@ -46,7 +61,7 @@ function CurtainMain({offsety}) {
           fill="#555555"
           fill-opacity="0.4"
         />
-        <rect y="36" width="314" height="36" fill="#777777" />
+        <rect y="36" width="314" height="36" fill="#BEE9FC" />
         <rect width="314" height="36" fill="#555555" fill-opacity="0.4" />
         <rect y="360" width="314" height="11" fill="#454545" />
       </svg>
