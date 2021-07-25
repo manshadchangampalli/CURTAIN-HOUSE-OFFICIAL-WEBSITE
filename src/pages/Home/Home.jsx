@@ -18,7 +18,10 @@ function Home() {
         </div>
       </div>
       <div className="darkmode">
-        <h4>DARK MODE</h4>
+          {
+              darkmode? <h4>LIGHT MODE</h4>:<h4>DARK MODE</h4>
+          }
+        
         {/* this div for the darkmode input */}
         <div className="darkmode-div">
             <input type="checkbox" onChange={(e)=>setDarkmode(e.target.checked)} value={darkmode}/>

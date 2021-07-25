@@ -38,6 +38,7 @@
       color: #1f1f1f;
       letter-spacing: .1rem;
       margin-right: 1rem;
+      transition: all .5s ease;
       font-size: 20px;
     }
     .darkmode-div {
@@ -138,6 +139,71 @@
     }
   }
 }
-.home.darkmode-checked{
-background: #000;
-}
+
+
+// for the dark mode     // for the dark mode
+
+
+.home.darkmode-checked {
+    
+    background-color: rgb(0, 0, 0);
+    
+    .navbar {
+      
+      .navbar-div {
+        
+        P {
+          
+          color: #6e8892ad;
+        }
+      }
+    }
+    .darkmode {
+     
+      h4 {
+        color:#6e8892ad ;
+      }
+      .darkmode-div {
+        
+        input[type="checkbox"] {
+          
+          &:checked {
+           
+            &::before {
+              
+            }
+          }
+          &::before {
+           
+          }
+        }
+      }
+    }
+    .title {
+      
+  
+      h1 {
+        color: #6e8892;
+      }
+    }
+    .curtain {
+      
+      .curtain-div {
+        background: #fff;
+        .curtain-header-div {
+          
+  
+          .curtain-img {
+              box-shadow: -12px 13px 25px rgba(0, 0, 0, 0.39);
+              background: url("../../Images/Night\ sky.png");
+            .curtain-main {
+              
+            }
+          }
+          .curtain-header {
+            
+          }
+        }
+      }
+    }
+  }
