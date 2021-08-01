@@ -2,8 +2,15 @@ import React, { useState } from "react";
 import "./Home.scss";
 import CurtainMain from "../../Components/CurtainMain";
 
-function Home() {
+function Home(props) {
     const [darkmode, setDarkmode] = useState(false)
+    props.setMode(darkmode)
+
+
+    // IF IT IS TRUE ITS DARK MODE 
+    // ELSE IT IS LIGHT MODE
+    
+    
   return (
     <div className={darkmode? "home darkmode-checked" : "home"}>
       {/* navbar */}

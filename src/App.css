@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
 
 *{
   margin: 0;
@@ -11,3 +12,20 @@ body{
   width: 100vw;
   overflow-x: hidden;
 }
+
+
+/* the color  */
+
+/* lighmode  *//* lighmode  *//* lighmode  *//* lighmode  */
+
+/* backgroundcolor = #fff */
+/* heading textcolor = #283940 */
+/* paragraph color = #000000b5 */
+
+
+
+/* darkmode *//* darkmode *//* darkmode */
+
+/* backgroundcolor = #000 */
+/* heading textcolor = #6e8892 */
+/* paragraph color = #ffffff73 */

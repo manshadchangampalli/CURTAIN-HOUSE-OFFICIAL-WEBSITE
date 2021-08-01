@@ -1,0 +1,84 @@
+.about {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 80vh;
+  padding: 0 10%;
+  border-bottom: 1px solid rgba(121, 121, 121, 0.411);
+  .about-content {
+    display: grid;
+    place-items: center;
+    &-div {
+      height: 80%;
+      width: 100%;
+      margin-right: 7rem;
+      display: flex;
+      padding-left: 10px;
+      align-items: center;
+      p {
+        font-size: 22px;
+        font-family: "Poppins", sans-serif;
+        word-spacing: 2px;
+        color: #000000b5;
+        letter-spacing: 1px;
+        span {
+          font-size: 25px;
+          font-weight: 800;
+          color: rgb(0, 0, 0);
+          letter-spacing: 0;
+        }
+      }
+    }
+  }
+  .about-title {
+    display: grid;
+    place-items: center;
+
+    &-div {
+      width: 60%;
+      margin-right: 40px;
+
+      h1 {
+        font-size: 75px;
+        font-family: "Fredoka One", cursive;
+        text-align: center;
+        font-weight: normal;
+        line-height: 0.9;
+        color: #283940;
+      }
+    }
+  }
+}
+
+
+
+// for dark mode we use the darkmode class with the about
+
+
+
+.about.darkmode {
+    background-color: black;
+    .about-content {
+      
+      &-div {
+        
+        p {
+         color: #ffffff73;
+          span {
+            color: white;
+          }
+        }
+      }
+    }
+    .about-title {
+     
+  
+      &-div {
+        
+  
+        h1 {
+            color: #6e8892;
+        }
+      }
+    }
+  }
+  
