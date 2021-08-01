@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Context from "./Components/Context";
 import About from "./pages/About/About";
+import Gallery from "./pages/Gallery/Gallery";
 import Home from "./pages/Home/Home";
 
 function Pages() {
@@ -15,6 +16,7 @@ function Pages() {
     <Context mode={mode}>
       <Home setMode={setMode} />
       <About />
+      <Gallery/>
     </Context>
   );
 }
