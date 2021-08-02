@@ -1,0 +1,99 @@
+.contact {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  &-box {
+    width: 70%;
+    height: 80%;
+    overflow: hidden;
+    background: #131313;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    &-titleandmap {
+      display: grid;
+      place-items: center;
+      grid-template-rows: 1fr 1fr;
+      &-title {
+        color: white;
+        display: grid;
+        width: 65%;
+        height: auto;
+        place-items: center;
+        h1 {
+          font-size: 41px;
+          font-weight: normal;
+          text-align: center;
+          font-family: "Fredoka One";
+        }
+      }
+      &-map {
+        width: 75%;
+        height: 85%;
+        background: white;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: -5px 0px 30px 0px rgb(0, 0, 0);
+      }
+    }
+
+    &-form {
+      background: #283940;
+      border-radius: 10px;
+      box-shadow: -5px 0px 30px 0px rgb(0, 0, 0);
+      display: grid;
+      place-items: center;
+      form {
+        height: 80%;
+        width: 80%;
+        display: grid;
+        grid-gap: 8px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 6fr 1fr;
+        grid-template-areas:
+          "fname lname"
+          "email email"
+          "msg msg"
+          "btn btn";
+        input,
+        textarea,
+        button {
+          border-radius: 6px;
+          font-size: 15px;
+          font-family: "Poppins", sans-serif;
+        }
+        input,
+        textarea {
+          padding-left: 15px;
+        }
+        textarea {
+          padding-top: 15px;
+          font-size: 20px;
+        }
+        .fname {
+          grid-area: fname;
+        }
+        .lname {
+          grid-area: lname;
+        }
+        .email {
+          grid-area: email;
+        }
+        .msg {
+          grid-area: msg;
+        }
+        .btn {
+          grid-area: btn;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+// darkmode darkmode darkmode darkmode
+
+.contact.darkmode {
+  background: #000;
+}
