@@ -6,7 +6,7 @@ import MyComponent from "../../Components/Map";
 function Contact() {
   const mode = useContext(ModeContext);
   return (
-    <div className={mode ? "contact darkmode" : "contact"}>
+    <div id="contact" className={mode ? "contact darkmode" : "contact"}>
       <div className="contact-box">
         {" "}
         {/* the contact box as cente */}

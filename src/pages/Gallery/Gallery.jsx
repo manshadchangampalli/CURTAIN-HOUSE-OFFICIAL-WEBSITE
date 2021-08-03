@@ -5,7 +5,7 @@ import {ModeContext} from "../../Components/Context"
 function Gallery() {
     const mode = useContext(ModeContext)
     return (
-        <div className={mode?"gallery darkmode":"gallery"}>
+        <div id="gallery" className={mode?"gallery darkmode":"gallery"}>
             <div className="gallery-title">
                 <h1>Gallery</h1>
             </div>

@@ -5,7 +5,7 @@ import {ModeContext} from '../../Components/Context'
 function About() {
 const mode = useContext(ModeContext)
   return (
-    <div className={mode? "about darkmode ": "about"}>
+    <div id="about" className={mode? "about darkmode ": "about"}>
       <div className="about-content">
         {/* subdiv of the about-content div */}
         <div className="about-content-div">

@@ -12,16 +12,16 @@ function Home(props) {
     
     
   return (
-    <div className={darkmode? "home darkmode-checked" : "home"}>
+    <div id="home" className={darkmode? "home darkmode-checked" : "home"}>
       {/* navbar */}
 
       <div className="navbar">
         {/* navbar div for align center the nav items*/}
         <div className="navbar-div">
-          <p>HOME</p>
-          <p>ABOUT US</p>
-          <p>GALLERY</p>
-          <p>CONTACT US</p>
+          <p><a href="#home">HOME</a></p>
+          <p><a href="#about">ABOUT US</a></p>
+          <p><a href="#gallery">GALLERY</a></p>
+          <p><a href="#contact">CONTACT US</a></p>
         </div>
       </div>
       <div className="darkmode">

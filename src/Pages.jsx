@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Context from "./Components/Context";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact us/Contact";
+import Footer from "./pages/Footer/Footer";
 import Gallery from "./pages/Gallery/Gallery";
 import Home from "./pages/Home/Home";
 
@@ -19,6 +20,7 @@ function Pages() {
       <About />
       <Gallery/>
       <Contact/>
+      <Footer/>
     </Context>
   );
 }

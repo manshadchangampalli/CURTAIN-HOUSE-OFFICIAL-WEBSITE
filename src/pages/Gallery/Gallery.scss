@@ -1,6 +1,6 @@
 .gallery {
   display: grid;
-  height: 100vh;
+  height: 110vh;
   grid-template-columns: 100vw;
   grid-template-rows: 1fr 6fr;
   border-bottom: 1px solid rgba(121, 121, 121, 0.411);
@@ -11,6 +11,7 @@
       font-family: "Fredoka One", cursive;
       font-weight: normal;
       font-size: 64px;
+      margin-top: 3rem;
       color: #28394027;
     }
   }
@@ -64,6 +65,7 @@
         background-size: cover;
         border-radius: 10px;
       }
+      
     }
   }
 }

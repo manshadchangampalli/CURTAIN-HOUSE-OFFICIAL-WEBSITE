@@ -1,0 +1,239 @@
+.footer {
+  background-color: rgb(0, 0, 0);
+  height: 200px;
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  cursor: none;
+}
+.footer::before {
+  content: "@copywrite2021";
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  font-weight: 100;
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+}
+#cursor {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  background-color: white;
+  pointer-events: none;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+}
+.text {
+  color: white;
+}
+#dummy {
+  height: 30px;
+  width: 300px;
+  bottom: 0;
+  left: 0;
+  border-radius: 0;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  mix-blend-mode: difference;
+  animation: dummy 15s infinite;
+  transition: all 2s ease;
+}
+@keyframes dummy {
+  0% {
+    bottom: 0;
+    left: 0;
+  }
+  50% {
+    bottom: 0;
+    left: 78vw;
+  }
+  100% {
+    bottom: 0;
+    left: 0;
+  }
+}
+.subfooter-div {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.socialmedia-icons-and-navitems {
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0);
+  height: 50%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.sclicons {
+  display: flex;
+
+  justify-content: center;
+}
+.call,
+.whatsapp,
+.instagram {
+  margin: 0 10px;
+}
+.call{
+    position: relative;
+    pointer-events: visible;
+}
+.whatsapp {
+  pointer-events: visible;
+}
+.whatsapp:hover ~ #cursor {
+  background-color: #f8a1ab;
+}
+.call:hover ~ #cursor {
+  background-color: #dbae10;
+}
+
+.instagram:hover ~ #cursor {
+  background: linear-gradient(
+    45deg,
+    #0f6bcc 0%,
+    #1997c3 25%,
+    #23d8bc 50%,
+    #33dc99 75%,
+    #43e777 100%
+  );
+}
+#callbefore {
+    
+    position: absolute;
+    width: 120px;
+    height: auto;
+    pointer-events: all;
+    top: -35px;
+    left: 16px;
+    color: white;
+    opacity: 1;
+}
+.call :hover{
+    top: 0;
+    left: 0;
+  }
+/* @keyframes dummy {
+  0% {
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+  }
+  5% {
+    top: 150px;
+    left: 10vw;
+    border-radius: 10%;
+  }
+  10% {
+    top: 0px;
+    left: 20vw;
+    border-radius: 30%;
+  }
+  15% {
+    top: 150px;
+    left: 30vw;
+    border-radius: 40%;
+  }
+  20% {
+    top: 0;
+    left: 40vw;
+    border-radius: 10%;
+  }
+  25% {
+    top: 150px;
+    left: 50vw;
+    border-radius: 35%;
+  }
+  30% {
+    top: 0;
+    border-radius: 20%;
+
+    left: 60vw;
+  }
+  35% {
+    top: 150px;
+    border-radius: 50%;
+
+    left: 70vw;
+  }
+  40% {
+    top: 0;
+    border-radius: 40%;
+    left: 80vw;
+  }
+  45% {
+    top: 150px;
+    border-radius: 50%;
+
+    left: 90vw;
+  }
+  50% {
+    top: 0;
+    left: 95vw;
+    border-radius: 10%;
+  }
+  100% {
+    top: 0;
+    border-radius: 50%;
+
+    left: 0;
+  }
+  95% {
+    top: 150px;
+    border-radius: 50%;
+
+    left: 10vw;
+  }
+  90% {
+    top: 0px;
+
+    border-radius: 50%;
+    left: 20vw;
+  }
+  85% {
+    top: 150px;
+    border-radius: 50%;
+
+    left: 30vw;
+  }
+  80% {
+    top: 0;
+    border-radius: 50%;
+
+    left: 40vw;
+  }
+  75% {
+    top: 150px;
+    border-radius: 50%;
+
+    left: 50vw;
+  }
+  70% {
+    top: 0;
+    left: 60vw;
+    border-radius: 50%;
+  }
+  65% {
+    border-radius: 50%;
+
+    top: 150px;
+    left: 70vw;
+  }
+  60% {
+    top: 0;
+    left: 80vw;
+    border-radius: 50%;
+  }
+  55% {
+    top: 150px;
+    border-radius: 50%;
+
+    left: 90vw;
+  }
+} */
