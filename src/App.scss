@@ -1,4 +1,4 @@
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
   // its for tablets
   // home page
 
@@ -40,7 +40,7 @@
     .curtain {
       grid-area: img;
       margin-top: 20px;
-  
+
       .curtain-div {
         margin-right: 0;
         margin-bottom: 30px;
@@ -60,7 +60,6 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
     .about-content {
-      
       .about-content-div {
         p {
           text-align: center;
@@ -68,10 +67,10 @@
         }
       }
     }
-    .about-title{
+    .about-title {
       grid-row-start: 1;
       grid-row-end: 2;
-      &-div{
+      &-div {
         margin-right: 0;
         margin-top: 20px;
         margin-bottom: 30px;
@@ -81,15 +80,15 @@
 }
 // the gallery page for responsive
 
-.gallery{
-  .gallery-title{
-    h1{
+.gallery {
+  .gallery-title {
+    h1 {
       color: #283940;
       margin-top: 0;
     }
   }
-  .gallery-images{
-    .gallery-images-div{
+  .gallery-images {
+    .gallery-images-div {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr;
       grid-template-areas:
@@ -97,6 +96,65 @@
         "img2"
         "img3"
         "img4";
+    }
+  }
+}
+
+// the contact section for responsive
+
+.contact-box {
+  grid-template-columns: 1fr;
+  height: 90%;
+  grid-template-rows: 1fr 1.5fr;
+  .contact-box-titleandmap-map {
+    width: 50%;
+    height: 100%;
+    margin-bottom: 33px;
+  }
+}
+
+// the footer section for responsive
+
+#cursor {
+  display: none;
+}
+// its for the mobiles which width is less than 767
+
+@media (max-width: 767px) {
+  .contact {
+    height: auto;
+    .contact-box {
+      &-titleandmap {
+        &-title {
+          h1 {
+            font-size: 34px;
+          }
+        }
+        &-map {height: 75%;
+        }
+      }
+      .contact-box-form {
+        form {
+          grid-template-columns: 1fr ;
+          grid-template-rows: 30px 30px 30px 6fr 1fr;
+          grid-template-areas:
+            "fname "
+            "lname"
+            "email"
+            "msg "
+            "btn ";
+          .fname {
+          }
+          .lname {
+          }
+          .email {
+          }
+          .msg {
+          }
+          .btn {
+          }
+        }
+      }
     }
   }
 }
