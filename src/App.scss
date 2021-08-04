@@ -9,9 +9,9 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
       "tog darkmode"
-      "img img"
-      "title title";
-    grid-template-rows: 70px 500px 300px;
+      "title title"
+      "img img";
+    grid-template-rows: 70px 300px 500px;
     .navbar {
       grid-area: tog;
 
@@ -31,17 +31,19 @@
     .title {
       grid-area: title;
       margin-top: 20px;
-      h1{
-          margin-left: 0;
-          font-size: 122px;
-          text-align: center;
+      h1 {
+        margin-left: 0;
+        font-size: 122px;
+        text-align: center;
       }
     }
     .curtain {
       grid-area: img;
       margin-top: 20px;
+  
       .curtain-div {
         margin-right: 0;
+        margin-bottom: 30px;
         height: 100%;
         .curtain-header-div {
           .curtain-header {
@@ -49,6 +51,30 @@
           .curtain-img {
           }
         }
+      }
+    }
+  }
+  // then the about page change to responsive
+
+  .about {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    .about-content {
+      
+      .about-content-div {
+        p {
+          text-align: center;
+          margin-bottom: 30px;
+        }
+      }
+    }
+    .about-title{
+      grid-row-start: 1;
+      grid-row-end: 2;
+      &-div{
+        margin-right: 0;
+        margin-top: 20px;
+        margin-bottom: 30px;
       }
     }
   }
