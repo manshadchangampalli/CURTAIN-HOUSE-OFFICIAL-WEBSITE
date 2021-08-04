@@ -7,6 +7,10 @@
     width: 100vw;
     padding-bottom: 30px;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr 86vh;
+    grid-template-areas: "tog darkmode"
+                          "img img" 
+                          "title title"
+                                       ;
+    grid-template-rows: 1fr auto auto;
   }
 }
