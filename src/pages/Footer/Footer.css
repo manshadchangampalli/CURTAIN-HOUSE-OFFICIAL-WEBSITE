@@ -80,9 +80,9 @@
 .instagram {
   margin: 0 10px;
 }
-.call{
-    position: relative;
-    pointer-events: visible;
+.call {
+  position: relative;
+  pointer-events: visible;
 }
 .whatsapp {
   pointer-events: visible;
@@ -104,136 +104,57 @@
     #43e777 100%
   );
 }
-#callbefore {
-    
-    position: absolute;
-    width: 120px;
-    height: auto;
-    pointer-events: all;
-    top: -35px;
-    left: 16px;
-    color: white;
-    opacity: 1;
+.nav-items-footer {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
 }
-.call :hover{
-    top: 0;
-    left: 0;
-  }
-/* @keyframes dummy {
-  0% {
-    top: 0;
-    left: 0;
-    border-radius: 50%;
-  }
-  5% {
-    top: 150px;
-    left: 10vw;
-    border-radius: 10%;
-  }
-  10% {
-    top: 0px;
-    left: 20vw;
-    border-radius: 30%;
-  }
-  15% {
-    top: 150px;
-    left: 30vw;
-    border-radius: 40%;
-  }
-  20% {
-    top: 0;
-    left: 40vw;
-    border-radius: 10%;
-  }
-  25% {
-    top: 150px;
-    left: 50vw;
-    border-radius: 35%;
-  }
-  30% {
-    top: 0;
-    border-radius: 20%;
+.nav-items-footer p {
+  margin: 0 8px;
+}
+.nav-items-footer p a {
+  color: white;
+}
+.footer.darkmode {
+  background-color: white;
+}
+.footer.darkmode .whatsapp:hover ~ #cursor {
+  background-color: #075e54;
+}
+.footer.darkmode .call:hover ~ #cursor {
+  background-color: #2451ef;
+}
 
-    left: 60vw;
-  }
-  35% {
-    top: 150px;
-    border-radius: 50%;
+.footer.darkmode .instagram:hover ~ #cursor {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+}
+.footer.darkmode .nav-items-footer p a {
+  color: black;
+  font-weight: 500;
+}
+.footer.darkmode .nav-items-footer {
+  color: black;
+}
 
-    left: 70vw;
-  }
-  40% {
-    top: 0;
-    border-radius: 40%;
-    left: 80vw;
-  }
-  45% {
-    top: 150px;
-    border-radius: 50%;
-
-    left: 90vw;
-  }
-  50% {
-    top: 0;
-    left: 95vw;
-    border-radius: 10%;
-  }
-  100% {
-    top: 0;
-    border-radius: 50%;
-
-    left: 0;
-  }
-  95% {
-    top: 150px;
-    border-radius: 50%;
-
-    left: 10vw;
-  }
-  90% {
-    top: 0px;
-
-    border-radius: 50%;
-    left: 20vw;
-  }
-  85% {
-    top: 150px;
-    border-radius: 50%;
-
-    left: 30vw;
-  }
-  80% {
-    top: 0;
-    border-radius: 50%;
-
-    left: 40vw;
-  }
-  75% {
-    top: 150px;
-    border-radius: 50%;
-
-    left: 50vw;
-  }
-  70% {
-    top: 0;
-    left: 60vw;
-    border-radius: 50%;
-  }
-  65% {
-    border-radius: 50%;
-
-    top: 150px;
-    left: 70vw;
-  }
-  60% {
-    top: 0;
-    left: 80vw;
-    border-radius: 50%;
-  }
-  55% {
-    top: 150px;
-    border-radius: 50%;
-
-    left: 90vw;
-  }
-} */
+.footer.darkmode::before {
+  content: "@copywrite2021";
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  font-weight: 100;
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+}
