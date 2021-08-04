@@ -1,0 +1,12 @@
+@media (min-width: 768px) and (max-width: 1024px) {
+  // its for tablets
+  // home page
+
+  .home {
+    height: auto;
+    width: 100vw;
+    padding-bottom: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 86vh;
+  }
+}

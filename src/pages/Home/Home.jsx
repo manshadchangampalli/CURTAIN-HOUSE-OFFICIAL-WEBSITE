@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Home.scss";
 import CurtainMain from "../../Components/CurtainMain";
+import Toggle from "../../Components/ToggleIcon/Toggle";
 
 function Home(props) {
     const [darkmode, setDarkmode] = useState(false)
@@ -16,6 +17,12 @@ function Home(props) {
       {/* navbar */}
 
       <div className="navbar">
+        {/* for toggle icon when it make resposive */}
+
+        <div className="toggle-icon">
+          <Toggle/>
+        </div>
+
         {/* navbar div for align center the nav items*/}
         <div className="navbar-div">
           <p><a href="#home">HOME</a></p>
