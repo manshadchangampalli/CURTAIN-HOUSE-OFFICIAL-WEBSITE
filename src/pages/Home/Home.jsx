@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Home.scss";
+import "../../App.scss";
 import CurtainMain from "../../Components/CurtainMain";
 import Toggle from "../../Components/ToggleIcon/Toggle";
 
@@ -20,7 +21,7 @@ function Home(props) {
         {/* for toggle icon when it make resposive */}
 
         <div className="toggle-icon">
-          <Toggle/>
+          <Toggle darkmode={darkmode}/>
         </div>
 
         {/* navbar div for align center the nav items*/}

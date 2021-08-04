@@ -1,7 +1,6 @@
 
 
     .smallbox{
-        background: linear-gradient(to left bottom, #ffffff00, #ffffffad);
         width: 100%;
         height: 100%;
         display: grid;
@@ -37,3 +36,43 @@
             transition: all 2s ease;
         }
     }
+    
+
+    .smallbox.darkmode{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        cursor: pointer;
+        pointer-events: visible;
+        place-content: center;
+        #fline{
+            width: 35px;
+            height: 5px;
+            pointer-events: visible;
+            margin: 2px 0;
+            background-color: rgb(255, 255, 255);
+            transform: translateX(-4px);
+            border-radius: 4px;
+            transition: all 2s ease;
+        } 
+        .sline{
+            width: 35px;
+            height: 5px;
+            margin: 2px 0;
+            background-color: rgb(255, 255, 255);
+            border-radius: 4px;
+            transition: all 2s ease;
+            transform: translateX(4px);
+        } 
+        .tline{
+            width: 35px;
+            height: 5px;
+            margin: 2px 0;
+            background-color: rgb(255, 255, 255);
+            transform: translateX(-4px);
+            border-radius: 4px;
+            transition: all 2s ease;
+        }
+    }
+    
+    
