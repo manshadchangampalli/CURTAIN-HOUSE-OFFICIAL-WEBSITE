@@ -104,7 +104,7 @@
 
 .contact-box {
   grid-template-columns: 1fr;
-  height: 90%;
+  height: 95%;
   grid-template-rows: 1fr 1.5fr;
   .contact-box-titleandmap-map {
     width: 50%;
@@ -130,12 +130,13 @@
             font-size: 34px;
           }
         }
-        &-map {height: 75%;
+        &-map {
+          height: 75%;
         }
       }
       .contact-box-form {
         form {
-          grid-template-columns: 1fr ;
+          grid-template-columns: 1fr;
           grid-template-rows: 30px 30px 30px 6fr 1fr;
           grid-template-areas:
             "fname "
@@ -157,4 +158,118 @@
       }
     }
   }
+  .nav-items-footer {
+    font-size: 10px;
+  }
+  .nav-items-footer p {
+    margin: 0 10px;
+  }
+}
+
+// its for the mobiles which width is less than 540
+
+@media (max-width: 540px) {
+  .nav-items-footer {
+    font-size: 6px;
+  }
+  .home .darkmode .darkmode-div input[type="checkbox"]::before {
+    height: 23px;
+    width: 23px;
+  }
+  .home .darkmode .darkmode-div input[type="checkbox"] {
+    height: 25px;
+    width: 45px;
+  }
+  .home .darkmode .darkmode-div input[type="checkbox"]:checked::before {
+    left: 20px;
+  }
+  .nav-items-footer p {
+    margin: 0 10px;
+  }
+  .home .title h1 {
+    font-size: 80px;
+    line-height: 1;
+  }
+  .home .darkmode h4 {
+    font-size: 10px;
+    margin-right: 3px;
+  }
+  .home .curtain .curtain-div {
+    width: 90%;
+    box-shadow: 5px -13px 25px rgba(0, 0, 0, 0.603);
+  }
+  .home .curtain .curtain-div .curtain-header-div .curtain-header {
+    width: 340px;
+    left: -18px;
+  }
+  .about {
+    padding: 0 3%;
+  }
+  .gallery-images {
+    padding: 6% 6%;
+  }
+  .contact-box {
+    width: 90%;
+  }
+  .footer {
+    height: 150px;
+  }
+}
+
+// its for the mobiles which width is less than 380
+
+@media (max-width: 380px) {
+  .nav-items-footer {
+    font-size: 6px;
+  }
+  .nav-items-footer p {
+    margin: 0 12px;
+  }
+  .socialmedia-icons-and-navitems {
+    width: 70%;
+  }
+  .home .title h1 {
+    font-size: 72px;
+  }
+  .home .curtain .curtain-div {
+    width: 95%;
+  }
+  .home .curtain .curtain-div .curtain-header-div .curtain-header {
+    width: 300px;
+    left: -9px;
+    background-position: right;
+    background-size: cover;
+}
+.home .curtain .curtain-div .curtain-header-div .curtain-img{
+  width: 280px;
+
+}
+.about .about-content-div {
+  width: 95%;
+}
+}
+
+// its for the mobiles which width is less than 320
+
+@media (max-width: 320px) {
+  .home .title h1 {
+    font-size: 60px;
+  }
+  .socialmedia-icons-and-navitems {
+    width: 78%;
+}
+.about .about-title-div h1 {
+  font-size: 56px;
+}
+  .home .curtain .curtain-div .curtain-header-div .curtain-header {
+    width: 275px;
+    left: -15px;
+  }
+  .home .curtain .curtain-div .curtain-header-div .curtain-img {
+    width: 243px;
+  }
+
+
+  
+
 }
