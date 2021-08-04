@@ -1,4 +1,20 @@
+@media (min-width: 1025px) and (max-width:1360px){
+  .home .curtain .curtain-div {
+    width: 95%;
+    height: 65%;
+  }
+  .home .title h1{
+    font-size: 110px;
+  }.home .darkmode{
+    padding-right: 2rem;
+  }.home .navbar .navbar-div{
+    margin-left: 35px;
+  }
+
+}
+
 @media (max-width: 1024px) {
+
   // its for tablets
   // home page
 
@@ -77,8 +93,7 @@
       }
     }
   }
-}
-// the gallery page for responsive
+  // the gallery page for responsive
 
 .gallery {
   .gallery-title {
@@ -112,12 +127,15 @@
     margin-bottom: 33px;
   }
 }
-
-// the footer section for responsive
-
 #cursor {
   display: none;
 }
+
+}
+
+// the footer section for responsive
+
+
 // its for the mobiles which width is less than 767
 
 @media (max-width: 767px) {
@@ -270,6 +288,6 @@
   }
 
 
-  
+
 
 }
