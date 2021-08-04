@@ -79,3 +79,24 @@
     }
   }
 }
+// the gallery page for responsive
+
+.gallery{
+  .gallery-title{
+    h1{
+      color: #283940;
+      margin-top: 0;
+    }
+  }
+  .gallery-images{
+    .gallery-images-div{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        "img1 "
+        "img2"
+        "img3"
+        "img4";
+    }
+  }
+}
