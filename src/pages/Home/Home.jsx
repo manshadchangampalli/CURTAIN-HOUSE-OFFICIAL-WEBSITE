@@ -7,14 +7,16 @@ import Toggle from "../../Components/ToggleIcon/Toggle";
 function Home(props) {
     const [darkmode, setDarkmode] = useState(false)
     props.setMode(darkmode)
-
+    const mouseover = ( ) => {
+      document.getElementById("cursor").style.opacity = "0"
+    }
 
     // IF IT IS TRUE ITS DARK MODE 
     // ELSE IT IS LIGHT MODE
     
     
   return (
-    <div id="home" className={darkmode? "home darkmode-checked" : "home"}>
+    <div onMouseOver={mouseover} id="home" className={darkmode? "home darkmode-checked" : "home"}>
       {/* navbar */}
 
       <div className="navbar">

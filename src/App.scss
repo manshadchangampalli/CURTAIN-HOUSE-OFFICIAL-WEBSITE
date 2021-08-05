@@ -96,6 +96,7 @@
   // the gallery page for responsive
 
 .gallery {
+  height: auto;
   .gallery-title {
     h1 {
       color: #283940;
@@ -105,7 +106,7 @@
   .gallery-images {
     .gallery-images-div {
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 300px 300px 300px 300px ;
       grid-template-areas:
         "img1 "
         "img2"
@@ -116,7 +117,9 @@
 }
 
 // the contact section for responsive
-
+.contact{
+  height: auto;
+}
 .contact-box {
   grid-template-columns: 1fr;
   height: 95%;

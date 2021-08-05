@@ -5,8 +5,11 @@ import MyComponent from "../../Components/Map";
 
 function Contact() {
   const mode = useContext(ModeContext);
+  const mouseover = ( ) => {
+    document.getElementById("cursor").style.opacity = "0"
+  }
   return (
-    <div id="contact" className={mode ? "contact darkmode" : "contact"}>
+    <div onMouseOver={mouseover} id="contact" className={mode ? "contact darkmode" : "contact"}>
       <div className="contact-box">
         {" "}
         {/* the contact box as cente */}

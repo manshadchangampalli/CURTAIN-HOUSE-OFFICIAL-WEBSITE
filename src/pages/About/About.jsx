@@ -4,8 +4,11 @@ import {ModeContext} from '../../Components/Context'
 
 function About() {
 const mode = useContext(ModeContext)
+const mouseover = ( ) => {
+  document.getElementById("cursor").style.opacity = "0"
+}
   return (
-    <div id="about" className={mode? "about darkmode ": "about"}>
+    <div onMouseOver={mouseover} id="about" className={mode? "about darkmode ": "about"}>
       <div className="about-content">
         {/* subdiv of the about-content div */}
         <div className="about-content-div">

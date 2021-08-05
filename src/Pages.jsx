@@ -21,6 +21,7 @@ function Pages() {
       <Gallery/>
       <Contact/>
       <Footer/>
+      <div id="cursor"></div>
     </Context>
   );
 }

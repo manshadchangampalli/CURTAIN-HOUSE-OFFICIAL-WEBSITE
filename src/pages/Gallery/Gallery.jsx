@@ -4,8 +4,11 @@ import {ModeContext} from "../../Components/Context"
 
 function Gallery() {
     const mode = useContext(ModeContext)
+    const mouseover = ( ) => {
+        document.getElementById("cursor").style.opacity = "0"
+      }
     return (
-        <div id="gallery" className={mode?"gallery darkmode":"gallery"}>
+        <div onMouseOver={mouseover} id="gallery" className={mode?"gallery darkmode":"gallery"}>
             <div className="gallery-title">
                 <h1>Gallery</h1>
             </div>

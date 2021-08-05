@@ -97,7 +97,7 @@
 .instagram:hover ~ #cursor {
   background: linear-gradient(
     45deg,
-    #0f6bcc 0%,
+    #0e437c 0%,
     #1997c3 25%,
     #23d8bc 50%,
     #33dc99 75%,
@@ -133,7 +133,7 @@
     #e6683c 25%,
     #dc2743 50%,
     #cc2366 75%,
-    #bc1888 100%
+    #613854 100%
   );
 }
 .footer.darkmode .nav-items-footer p a {
