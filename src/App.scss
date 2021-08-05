@@ -1,20 +1,62 @@
-@media (min-width: 1025px) and (max-width:1360px){
+// its for the 4k that means 2000 to high
+@media (min-width: 2000px) {
+  .home .navbar .navbar-div P {
+    font-size: 28px;
+  }
+  .home .title{
+    justify-content: flex-start;
+  }
+  .home .title h1{
+    line-height: 1;
+    font-size: 200px;
+    margin-left: 100px;
+  }
+ .home .darkmode .darkmode-div input[type="checkbox"]{
+   transform: scale(1.5);
+ }
+ .home .darkmode h4{
+   transform: scale(1.5);
+   margin-right: 4rem;
+ }.home .curtain .curtain-div .curtain-header-div .curtain-header {
+   transform: scale(1.5);
+ }
+ .curtain-header-div .curtain-img {
+   transform: scale(1.5);
+ }
+ .about .about-content-div p {
+   font-size: 35px;
+ }
+ .contact-box-form form input, .contact-box-form form textarea, .contact-box-form form button{
+   font-size: 25px;
+ }
+ .footer{
+   transform: scale(1.5);
+ }
+
+
+}
+
+
+
+
+
+@media (min-width: 1025px) and (max-width: 1360px) {
   .home .curtain .curtain-div {
     width: 95%;
     height: 65%;
   }
-  .home .title h1{
+  .home .title h1 {
     font-size: 110px;
-  }.home .darkmode{
+  }
+  .home .darkmode {
     padding-right: 2rem;
-  }.home .navbar .navbar-div{
+  }
+  .home .navbar .navbar-div {
     margin-left: 35px;
   }
-
 }
 
 @media (max-width: 1024px) {
-
   // its for tablets
   // home page
 
@@ -95,49 +137,47 @@
   }
   // the gallery page for responsive
 
-.gallery {
-  height: auto;
-  .gallery-title {
-    h1 {
-      color: #283940;
-      margin-top: 0;
+  .gallery {
+    height: auto;
+    .gallery-title {
+      h1 {
+        color: #283940;
+        margin-top: 0;
+      }
+    }
+    .gallery-images {
+      .gallery-images-div {
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px 300px 300px 300px;
+        grid-template-areas:
+          "img1 "
+          "img2"
+          "img3"
+          "img4";
+      }
     }
   }
-  .gallery-images {
-    .gallery-images-div {
-      grid-template-columns: 1fr;
-      grid-template-rows: 300px 300px 300px 300px ;
-      grid-template-areas:
-        "img1 "
-        "img2"
-        "img3"
-        "img4";
+
+  // the contact section for responsive
+  .contact {
+    height: auto;
+  }
+  .contact-box {
+    grid-template-columns: 1fr;
+    height: 95%;
+    grid-template-rows: 1fr 1.5fr;
+    .contact-box-titleandmap-map {
+      width: 50%;
+      height: 100%;
+      margin-bottom: 33px;
     }
   }
-}
-
-// the contact section for responsive
-.contact{
-  height: auto;
-}
-.contact-box {
-  grid-template-columns: 1fr;
-  height: 95%;
-  grid-template-rows: 1fr 1.5fr;
-  .contact-box-titleandmap-map {
-    width: 50%;
-    height: 100%;
-    margin-bottom: 33px;
+  #cursor {
+    display: none;
   }
-}
-#cursor {
-  display: none;
-}
-
 }
 
 // the footer section for responsive
-
 
 // its for the mobiles which width is less than 767
 
@@ -197,10 +237,9 @@
     height: 23px;
     width: 23px;
   }
-  .about .about-title-div h1{
+  .about .about-title-div h1 {
     font-size: 40px;
-  
- }
+  }
   .home .darkmode .darkmode-div input[type="checkbox"] {
     height: 25px;
     width: 45px;
@@ -264,14 +303,13 @@
     left: -9px;
     background-position: right;
     background-size: cover;
-}
-.home .curtain .curtain-div .curtain-header-div .curtain-img{
-  width: 280px;
-
-}
-.about .about-content-div {
-  width: 95%;
-}
+  }
+  .home .curtain .curtain-div .curtain-header-div .curtain-img {
+    width: 280px;
+  }
+  .about .about-content-div {
+    width: 95%;
+  }
 }
 
 // its for the mobiles which width is less than 320
@@ -282,19 +320,18 @@
   }
   .socialmedia-icons-and-navitems {
     width: 78%;
-}
-.about .about-title-div h1 {
-  font-size: 56px;
-}
+  }
+  .about .about-title-div h1 {
+    font-size: 56px;
+  }
   .home .curtain .curtain-div .curtain-header-div .curtain-header {
-    width: 275px;
-    left: -15px;
+   transform: scale(.7);
+    left: -20px;
+    top: -5px;
   }
   .home .curtain .curtain-div .curtain-header-div .curtain-img {
-    width: 243px;
+    transform: scale(.7);
+    left: -10px;
   }
-
-
-
-
 }
+
