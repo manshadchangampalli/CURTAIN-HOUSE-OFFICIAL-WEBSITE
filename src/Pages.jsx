@@ -21,7 +21,7 @@ function Pages() {
       <Gallery/>
       <Contact/>
       <Footer/>
-      <div id="cursor"></div>
+      <div id="cursor" style={mode? {"background":"white"}:{"background":"white"}}></div>
     </Context>
   );
 }

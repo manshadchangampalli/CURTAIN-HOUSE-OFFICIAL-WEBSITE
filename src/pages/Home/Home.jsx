@@ -5,6 +5,7 @@ import CurtainMain from "../../Components/CurtainMain";
 import Toggle from "../../Components/ToggleIcon/Toggle";
 
 function Home(props) {
+    const [navbar, setNavbar] = useState(false)
     const [darkmode, setDarkmode] = useState(false)
     props.setMode(darkmode)
     const mouseover = ( ) => {
@@ -14,7 +15,13 @@ function Home(props) {
     // IF IT IS TRUE ITS DARK MODE 
     // ELSE IT IS LIGHT MODE
     
-    
+    // the function passed to toggle component
+
+    const ToggleClicked = (state) => {
+      setNavbar(state)
+    }
+
+
   return (
     <div onMouseOver={mouseover} id="home" className={darkmode? "home darkmode-checked" : "home"}>
       {/* navbar */}
@@ -23,7 +30,14 @@ function Home(props) {
         {/* for toggle icon when it make resposive */}
 
         <div className="toggle-icon">
-          <Toggle darkmode={darkmode}/>
+          <Toggle navbar={navbar} ToggleClicked={ToggleClicked} darkmode={darkmode}/>
+        </div>
+        {/* responsive navbar */}
+        <div style={navbar?{"display":"grid","transition":"all 1s ease"}:{"display":"none"}} className="responsivenavbar">
+          <div><a onClick={()=>ToggleClicked(!navbar)} href="#home">HOME</a></div>
+          <div><a onClick={()=>ToggleClicked(!navbar)} href="#about">ABOUT US</a></div>
+          <div><a onClick={()=>ToggleClicked(!navbar)} href="#gallery">GALLERY</a></div>
+          <div><a onClick={()=>ToggleClicked(!navbar)} href="#contact">CONTACT US</a></div>
         </div>
 
         {/* navbar div for align center the nav items*/}
