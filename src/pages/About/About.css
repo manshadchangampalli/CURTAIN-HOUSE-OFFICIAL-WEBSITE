@@ -1,0 +1,80 @@
+.about {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  -ms-grid-rows: 80vh;
+      grid-template-rows: 80vh;
+  padding: 0 10%;
+  border-bottom: 1px solid rgba(121, 121, 121, 0.411);
+}
+
+.about .about-content {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.about .about-content-div {
+  height: 80%;
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .about-content-div p {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  word-spacing: 2px;
+  color: #000000b5;
+  letter-spacing: 1px;
+}
+
+.about .about-content-div p span {
+  font-size: 25px;
+  font-weight: 800;
+  color: black;
+  letter-spacing: 0;
+}
+
+.about .about-title {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.about .about-title-div {
+  width: 75%;
+  margin-right: 70px;
+}
+
+.about .about-title-div h1 {
+  font-size: 75px;
+  font-family: "Fredoka One", cursive;
+  text-align: center;
+  font-weight: normal;
+  line-height: 0.9;
+  color: #283940;
+}
+
+.about.darkmode {
+  background-color: black;
+}
+
+.about.darkmode .about-content-div p {
+  color: #ffffff73;
+}
+
+.about.darkmode .about-content-div p span {
+  color: white;
+}
+
+.about.darkmode .about-title-div h1 {
+  color: #6e8892;
+}
+/*# sourceMappingURL=About.css.map */

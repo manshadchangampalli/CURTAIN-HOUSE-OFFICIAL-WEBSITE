@@ -67,7 +67,8 @@ function Home(props) {
           {/* curtainheaderdiv for curtianheader */}
           <div className="curtain-header-div">
             <div className="curtain-header"></div>
-            <div className="curtain-img">
+            <div  className="curtain-img">
+              
               <CurtainMain />
             </div>
           </div>

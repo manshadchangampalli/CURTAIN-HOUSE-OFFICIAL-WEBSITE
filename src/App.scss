@@ -182,6 +182,14 @@
 // its for the mobiles which width is less than 767
 
 @media (max-width: 767px) {
+  .home .curtain .curtain-div .curtain-header-div .curtain-img{
+    background: url("./Images/Night\ sky.png")
+
+  }
+  .home.darkmode-checked .curtain .curtain-div .curtain-header-div .curtain-img{
+    background: url("./Images/Night\ sky.png")
+
+  } 
   .contact {
     height: auto;
     .contact-box {

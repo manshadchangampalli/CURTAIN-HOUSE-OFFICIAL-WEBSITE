@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import './Gallery.scss'
+import './Gallery.css'
 import {ModeContext} from "../../Components/Context"
 
 function Gallery() {
