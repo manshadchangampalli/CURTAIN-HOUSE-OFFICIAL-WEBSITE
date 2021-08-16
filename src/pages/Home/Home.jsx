@@ -68,7 +68,6 @@ function Home(props) {
           <div className="curtain-header-div">
             <div className="curtain-header"></div>
             <div  className="curtain-img">
-              
               <CurtainMain />
             </div>
           </div>

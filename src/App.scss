@@ -3,42 +3,39 @@
   .home .navbar .navbar-div P {
     font-size: 28px;
   }
-  .home .title{
+  .home .title {
     justify-content: flex-start;
   }
-  .home .title h1{
+  .home .title h1 {
     line-height: 1;
     font-size: 200px;
     margin-left: 100px;
   }
- .home .darkmode .darkmode-div input[type="checkbox"]{
-   transform: scale(1.5);
- }
- .home .darkmode h4{
-   transform: scale(1.5);
-   margin-right: 4rem;
- }.home .curtain .curtain-div .curtain-header-div .curtain-header {
-   transform: scale(1.5);
- }
- .curtain-header-div .curtain-img {
-   transform: scale(1.5);
- }
- .about .about-content-div p {
-   font-size: 35px;
- }
- .contact-box-form form input, .contact-box-form form textarea, .contact-box-form form button{
-   font-size: 25px;
- }
- .footer{
-   transform: scale(1.5);
- }
-
-
+  .home .darkmode .darkmode-div input[type="checkbox"] {
+    transform: scale(1.5);
+  }
+  .home .darkmode h4 {
+    transform: scale(1.5);
+    margin-right: 4rem;
+  }
+  .home .curtain .curtain-div .curtain-header-div .curtain-header {
+    transform: scale(1.5);
+  }
+  .curtain-header-div .curtain-img {
+    transform: scale(1.5);
+  }
+  .about .about-content-div p {
+    font-size: 35px;
+  }
+  .contact-box-form form input,
+  .contact-box-form form textarea,
+  .contact-box-form form button {
+    font-size: 25px;
+  }
+  .footer {
+    transform: scale(1.5);
+  }
 }
-
-
-
-
 
 @media (min-width: 1025px) and (max-width: 1360px) {
   .home .curtain .curtain-div {
@@ -182,17 +179,20 @@
 // its for the mobiles which width is less than 767
 
 @media (max-width: 767px) {
-  .home .curtain .curtain-div .curtain-header-div .curtain-img{
-    background: url("./Images/Night\ sky.png")
-
+  .home .curtain .curtain-div .curtain-header-div .curtain-img {
+    background: url("./Images/Night\ sky.png");
   }
-  .home.darkmode-checked .curtain .curtain-div .curtain-header-div .curtain-img{
-    background: url("./Images/Night\ sky.png")
-
-  } 
+  .home.darkmode-checked
+    .curtain
+    .curtain-div
+    .curtain-header-div
+    .curtain-img {
+    background: url("./Images/Night\ sky.png");
+  }
   .contact {
     height: auto;
     .contact-box {
+      width: 100%;
       &-titleandmap {
         &-title {
           h1 {
@@ -205,7 +205,7 @@
       }
       .contact-box-form {
         form {
-          grid-template-columns: 1fr;
+          grid-template-columns: 100%;
           grid-template-rows: 30px 30px 30px 6fr 1fr;
           grid-template-areas:
             "fname "
@@ -318,6 +318,7 @@
   .about .about-content-div {
     width: 95%;
   }
+  
 }
 
 // its for the mobiles which width is less than 320
@@ -333,13 +334,12 @@
     font-size: 56px;
   }
   .home .curtain .curtain-div .curtain-header-div .curtain-header {
-   transform: scale(.7);
+    transform: scale(0.7);
     left: -20px;
     top: -5px;
   }
   .home .curtain .curtain-div .curtain-header-div .curtain-img {
-    transform: scale(.7);
+    transform: scale(0.7);
     left: -10px;
   }
 }
-

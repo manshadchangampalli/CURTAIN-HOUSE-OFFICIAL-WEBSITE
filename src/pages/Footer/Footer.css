@@ -151,7 +151,7 @@ overflow: hidden;
 }
 
 .footer.darkmode::before {
-  content: "@copywrite2021";
+  content: "@copyrights2021";
   font-family: "Poppins", sans-serif;
   position: absolute;
   font-weight: 100;

@@ -3,6 +3,7 @@
     .smallbox{
         width: 100%;
         height: 100%;
+        mix-blend-mode: difference;
         display: grid;
         cursor: pointer;
         pointer-events: visible;
