@@ -44,18 +44,20 @@
       box-shadow: -5px 0px 30px 0px rgb(0, 0, 0);
       display: grid;
       place-items: center;
-      form {
+       form {
         height: 80%;
         width: 80%;
         display: grid;
+        place-self: center;
         grid-gap: 8px;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 50% 50%;
         grid-template-rows: 1fr 1fr 6fr 1fr;
         grid-template-areas:
-          "fname lname"
-          "email email"
-          "msg msg"
-          "btn btn";
+            "fname lname"
+            "email email"
+            "msg msg"
+            "btn btn";
+    
         input,
         textarea,
         button {

@@ -3,11 +3,46 @@ import "./Contact.scss";
 import { ModeContext } from "../../Components/Context";
 import MyComponent from "../../Components/Map";
 
+
 function Contact() {
+  
   const mode = useContext(ModeContext);
   const mouseover = ( ) => {
     document.getElementById("cursor").style.opacity = "0"
   }
+
+
+  const Name1 = document.querySelector('.fname')
+  const Name2 = document.querySelector('.flname')
+  const Email = document.querySelector('.email')
+  const Message = document.querySelector('.msg')
+  const scriptURL = 'https://script.google.com/macros/s/AKfycby24iQXx6FUxuE2BUtHcCqXI9AjuKU6k-ZOJ5f7jYP-rsi9Kuqn6ecSlqjAbFHuDv_X/exec'
+  const form = document.forms['curtain-house']//here your form name
+  
+  
+ form.addEventListener('submit',e =>{
+ e.preventDefault()
+ fetch(scriptURL,{method:'POST',body: new FormData(form)})
+ .then(response=> {
+         setTimeout(()=>{
+             Name1.value= ""
+             Name2.value= ""
+             Email.value= ""
+             Message.value= ""
+             
+ 
+         },2000)
+         
+     })
+ .catch((error) => {
+     
+    
+ }
+ )
+ })
+
+
+  
   return (
     <div onMouseOver={mouseover} id="contact" className={mode ? "contact darkmode" : "contact"}>
       <div className="contact-box">
@@ -31,13 +66,13 @@ function Contact() {
         </div>
         <div className="contact-box-form">
           {/* it for from */}
-          <form action="">
+          <form method="POST" name="curtain-house">
             
-              <input type="text" className=" fname" placeholder="First Name"/>
-              <input type="text" className="lname" placeholder="Last Name"/>
-              <input type="email" className="email" placeholder="Email"/>
-            <textarea placeholder="Message" className="msg" name="" id="" cols="30" rows="10"></textarea>           
-            <button className="btn">SEND</button>
+              <input type="text" name="firstname" className=" fname" placeholder="First Name"/>
+              <input type="text" name="lastname" className="lname" placeholder="Last Name"/>
+              <input type="email" name="email" className="email" placeholder="Email"/>
+            <textarea placeholder="Message" name="message" className="msg" name="" id="" cols="30" rows="10"></textarea>           
+            <button type="submit" name="sendbutton" className="btn">SEND</button>
           </form>
         </div>
       </div>

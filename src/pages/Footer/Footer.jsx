@@ -12,7 +12,6 @@ function Footer() {
       cursor.style.top = x - 25 + "px";
       cursor.style.left = e.pageX - 25 + "px";
       if (e.pageY < 2375) {
-        console.log("helloooo guys");
         dummy.style.display = "block";
       } else {
         dummy.style.display = "none";
@@ -106,7 +105,7 @@ function Footer() {
               onMouseOver={() => mouseOver("call")}
               onMouseOut={() => mouseOut("call")}
               id="call"
-              href="tel:+918593805048"
+              href="tel:+918590751107"
               className="call"
             >
               <svg
@@ -132,7 +131,7 @@ function Footer() {
               onMouseOver={() => mouseOver("whatsapp")}
               onMouseOut={() => mouseOut("whatsapp")}
               id="whatsapp"
-              href="https://wa.me/+918593805048?text=Hello!"
+              href="https://wa.me/+918086240259?text=Hello!"
               className="whatsapp"
             >
               <svg

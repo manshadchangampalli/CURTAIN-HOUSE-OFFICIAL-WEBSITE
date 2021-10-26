@@ -1,27 +1,14 @@
 .gallery {
   display: -ms-grid;
   display: grid;
-  height: 110vh;
+  height: 100vh;
   -ms-grid-columns: 100vw;
       grid-template-columns: 100vw;
-  -ms-grid-rows: 1fr 6fr;
-      grid-template-rows: 1fr 6fr;
+  -ms-grid-rows: 6fr;
+      grid-template-rows: 6fr;
   border-bottom: 1px solid rgba(121, 121, 121, 0.411);
 }
 
-.gallery-title {
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-}
-
-.gallery-title h1 {
-  font-family: "Fredoka One", cursive;
-  font-weight: normal;
-  font-size: 64px;
-  margin-top: 3rem;
-  color: #28394027;
-}
 
 .gallery-images {
   display: -ms-grid;
@@ -40,7 +27,8 @@
       grid-template-columns: 1fr 1fr 1.3fr;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      grid-template-areas: "img1 img2 img4 " "img3 img3 img4";
+      grid-template-areas: "img1 img2 img4 "
+ "img3 img3 img4";
 }
 
 .gallery-images-div .img {
