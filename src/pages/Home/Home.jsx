@@ -5,8 +5,16 @@ import CurtainMain from "../../Components/CurtainMain";
 import Toggle from "../../Components/ToggleIcon/Toggle";
 
 function Home(props) {
+    var isDark = localStorage.getItem("darkmode")
+    var isDarkFlag
+    if(isDark==="off"){
+      isDarkFlag=false
+    }else{
+      isDarkFlag=true
+    }
+
     const [navbar, setNavbar] = useState(false)
-    const [darkmode, setDarkmode] = useState(false)
+    const [darkmode, setDarkmode] = useState(isDarkFlag)
     props.setMode(darkmode)
     const mouseover = ( ) => {
       document.getElementById("cursor").style.opacity = "0"
@@ -20,7 +28,18 @@ function Home(props) {
     const ToggleClicked = (state) => {
       setNavbar(state)
     }
-
+    // if the darkmode button clicked 
+    const darkmodeButtonCliked = ()=>{
+      if(darkmode===false){
+        setDarkmode(true)
+        localStorage.setItem("darkmode","on")
+      }else{
+        setDarkmode(false)
+        localStorage.setItem("darkmode","off")
+      }
+      
+    }
+    
 
   return (
     <div onMouseOver={mouseover} id="home" className={darkmode? "home darkmode-checked" : "home"}>
@@ -55,7 +74,9 @@ function Home(props) {
         
         {/* this div for the darkmode input */}
         <div className="darkmode-div">
-            <input type="checkbox" onChange={(e)=>setDarkmode(e.target.checked)} value={darkmode}/>
+            {/* <input type="checkbox" onChange={(e)=>setDarkmode(e.target.checked)} value={darkmode}/> */}
+            <div className="dm-bg"></div>
+            <div onClick={darkmodeButtonCliked} className="circle"></div>
         </div>
       </div>
       <div className="title">

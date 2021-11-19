@@ -96,38 +96,29 @@
     .darkmode-div {
       display: grid;
       place-items: center;
+      position: relative;
 
-      input[type="checkbox"] {
+      .dm-bg{
         width: 60px;
         height: 30px;
-        position: relative;
         transition: all 0.5s ease-in;
+        background-color: #283940;
+        border-radius: 20px;
+        box-shadow: inset 0px 0px 5px#fff;
         outline: none;
         cursor: pointer;
-        box-shadow: inset 0px 0px 5px#fff;
-        background-color: #283940;
-        -webkit-appearance: none;
-        border-radius: 20px;
-        &:checked {
-          background-color: white;
-          box-shadow: inset 0px 0px 5px rgb(0, 0, 0);
-          &::before {
-            left: 29px;
-            background: #000;
-          }
-        }
-        &::before {
-          content: "";
+      }
+      .circle {
           position: absolute;
           transition: all 0.5s ease-in-out;
           top: 1px;
-          left: 1px;
+          left: 30px;
           height: 28px;
           width: 28px;
+          cursor: pointer;
           background: white;
           border-radius: 50%;
         }
-      }
     }
   }
   .title {

@@ -20,26 +20,26 @@ function Contact() {
   const form = document.forms['curtain-house']//here your form name
   
   
- form.addEventListener('submit',e =>{
- e.preventDefault()
- fetch(scriptURL,{method:'POST',body: new FormData(form)})
- .then(response=> {
-         setTimeout(()=>{
-             Name1.value= ""
-             Name2.value= ""
-             Email.value= ""
-             Message.value= ""
+//  form.addEventListener('submit',e =>{
+//  e.preventDefault()
+//  fetch(scriptURL,{method:'POST',body: new FormData(form)})
+//  .then(response=> {
+//          setTimeout(()=>{
+//              Name1.value= ""
+//              Name2.value= ""
+//              Email.value= ""
+//              Message.value= ""
              
  
-         },2000)
+//          },2000)
          
-     })
- .catch((error) => {
+//      })
+//  .catch((error) => {
      
     
- }
- )
- })
+//  }
+//  )
+//  })
 
 
   
