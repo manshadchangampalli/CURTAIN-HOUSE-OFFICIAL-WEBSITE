@@ -74,9 +74,10 @@ function Home(props) {
         
         {/* this div for the darkmode input */}
         <div className="darkmode-div">
-            {/* <input type="checkbox" onChange={(e)=>setDarkmode(e.target.checked)} value={darkmode}/> */}
-            <div className="dm-bg"></div>
-            <div onClick={darkmodeButtonCliked} className="circle"></div>
+          {/* the darkmode button background */}
+            <div style={darkmode?{"background":"#fff"}:{background:"#283940"}} className="dm-bg"></div>
+            {/* thedarkmode button circle  */}
+            <div style={darkmode?{"background":"#283940","left":"30px"}:{background:"#fff"}} onClick={darkmodeButtonCliked} className="circle"></div>
         </div>
       </div>
       <div className="title">
