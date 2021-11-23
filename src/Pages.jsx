@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Context from "./Components/Context";
+import ChatBot from "./Components/LiveChatBot/ChatBot";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact us/Contact";
 import Footer from "./pages/Footer/Footer";
@@ -22,6 +23,7 @@ function Pages() {
       <Contact/>
       <Footer/>
       <div id="cursor" style={mode? {"background":"white"}:{"background":"white"}}></div>
+      {/* <ChatBot/> */}
     </Context>
   );
 }

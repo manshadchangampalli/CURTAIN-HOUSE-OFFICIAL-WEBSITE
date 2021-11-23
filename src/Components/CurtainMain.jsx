@@ -9,7 +9,6 @@ function CurtainMain() {
   function handleScroll(){
     setOffsetY(window.scrollY)
   }
-  console.log(offsetY);
   var top
   if(offsetY<=265){
     top = {"top": offsetY-230+"px"}

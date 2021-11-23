@@ -40,7 +40,6 @@ function Home(props) {
       
     }
     
-
   return (
     <div onMouseOver={mouseover} id="home" className={darkmode? "home darkmode-checked" : "home"}>
       {/* navbar */}
@@ -52,7 +51,7 @@ function Home(props) {
           <Toggle navbar={navbar} ToggleClicked={ToggleClicked} darkmode={darkmode}/>
         </div>
         {/* responsive navbar */}
-        <div style={navbar?{"display":"grid","transition":"all 1s ease"}:{"display":"none"}} className="responsivenavbar">
+        <div onClick={()=>ToggleClicked(!navbar)} style={navbar?{"display":"grid","transition":"all 1s ease"}:{"display":"none"}} className="responsivenavbar">
           <div><a onClick={()=>ToggleClicked(!navbar)} href="#home">HOME</a></div>
           <div><a onClick={()=>ToggleClicked(!navbar)} href="#about">ABOUT US</a></div>
           <div><a onClick={()=>ToggleClicked(!navbar)} href="#gallery">GALLERY</a></div>
@@ -75,7 +74,7 @@ function Home(props) {
         {/* this div for the darkmode input */}
         <div className="darkmode-div">
           {/* the darkmode button background */}
-            <div style={darkmode?{"background":"#fff"}:{background:"#283940"}} className="dm-bg"></div>
+            <div onClick={darkmodeButtonCliked} style={darkmode?{"background":"#fff"}:{background:"#283940"}} className="dm-bg"></div>
             {/* thedarkmode button circle  */}
             <div style={darkmode?{"background":"#283940","left":"30px"}:{background:"#fff"}} onClick={darkmodeButtonCliked} className="circle"></div>
         </div>

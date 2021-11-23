@@ -3,7 +3,7 @@ import './Toggle.scss'
 
 function Toggle({darkmode,ToggleClicked,navbar}) {
     // the hover of css function is not working so icreated it by using dom of js
-    console.log(darkmode);
+    console.log(navbar,"navbar");
     function hover(){
         document.getElementById("fline").style.transform = "translateX(-10px)";
         document.getElementById("tline").style.transform = "translateX(-10px)";
@@ -19,13 +19,13 @@ function Toggle({darkmode,ToggleClicked,navbar}) {
         <div  style={
                 navbar
                   ? {transform:"translateY(8px) rotate(45deg)"  }
-                  :{}
+                  :null
               } className="fline" id="fline"></div>
         <div className="sline" id="sline"></div>
         <div  style={
                 navbar
                   ? {transform:"translateY(-10px) rotate(-45deg)"  }
-                  :  {}
+                  :  null
               } className="tline" id="tline"></div>
       </div>
    
