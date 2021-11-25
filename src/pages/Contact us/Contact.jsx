@@ -1,12 +1,11 @@
 import React, { useContext } from "react";
 import "./Contact.scss";
-import { ModeContext } from "../../Components/Context";
-import MyComponent from "../../Components/Map/Map";
+import {useSelector} from "react-redux";
 
 
 function Contact() {
   
-  const mode = useContext(ModeContext);
+  const mode = useSelector(state=>state.darkmode)
   const mouseover = ( ) => {
     document.getElementById("cursor").style.opacity = "0"
   }

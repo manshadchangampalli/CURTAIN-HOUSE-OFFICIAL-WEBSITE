@@ -1,13 +1,17 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./Footer.css";
 import { ModeContext } from "../../Components/Context";
+import {useDispatch, useSelector} from "react-redux";
+import {MousePointer} from "../../Redux/Action/Action";
 
 function Footer() {
-  const mode = useContext(ModeContext);
+  const mode = useSelector(state=>state.darkmode)
+  const dispatch = useDispatch()
   useEffect(() => {
     var cursor = document.getElementById("cursor");
     var dummy = document.getElementById("dummy");
     document.addEventListener("mousemove", function (e) {
+      dispatch(MousePointer(e.pageX,e.pageY))
       var x = e.pageY;
       cursor.style.top = x - 25 + "px";
       cursor.style.left = e.pageX - 25 + "px";

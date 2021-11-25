@@ -10,3 +10,13 @@ export const darkModeOff = () =>{
         payload:"",
     }
 }
+
+export const MousePointer = (offsetX,offsetY) =>{
+    return{
+        type:"THE_MOUSEPOINT",
+        payload:{
+            offsetX:offsetX,
+            offsetY:offsetY
+        }
+    }
+}

@@ -1,45 +1,66 @@
 import React, {useEffect, useState} from 'react'
+import {useSelector} from 'react-redux'
 import GalleryItems from '../../Components/NewGallery/GalleryItems'
 import './NewGallery.scss'
 
 
 function NewGallery() {
-    const [mouseOver, SetMouseOver] = useState(false)
-    const [mouseOut, SetMouseOut] = useState(false)
-
-
+    const [offsetX, setOffsetX] = useState(0)
+    const [offsetY, setOffsetY] = useState(0)
+    const [item,setItem] = useState('')
+    const [removeItem,setRemoveItem] = useState(false)
+    // const {offsetX,offsetYY = useSelector(state => state.mousePointer)
+    window.addEventListener('mousemove',(e)=>{
+        setOffsetX(e.screenX-100)
+        setOffsetY(e.screenY-200)
+    })
+    // console.log(offsetX,offsetY,"using by redux");
+    const mouseHover =(item)=>{
+        setItem(item)
+    }
+    const mouseOut = (item)=>{
+    }
+    if(item==="item1"&&!removeItem){
+    }
+    else if(item==="item2"&&!removeItem){
+    }else if(item==="item3"&&!removeItem){
+    }else if(item==="item4"&&!removeItem){
+    }else if(item==="item5"&&!removeItem){
+    }else{
+    }
     
+
     return (
         // why is the new gallery means the old gallary componet design is not good or not good model
-        <div className="new-gallery">
+        <div onMouseOver={()=>setRemoveItem(false)} onMouseOut={()=>setRemoveItem(true)} className="new-gallery">
             <div className="container">
                 <GalleryItems
-                 SetMouseOver={SetMouseOver}
-                 SetMouseOut={SetMouseOut}
+                 mouseHover={mouseHover}
+                 mouseOut={mouseOut}
                   text="ZEBRA BLINDS" 
                   items="item1"/>
                 <GalleryItems
-                 SetMouseOver={SetMouseOver} 
-                 SetMouseOut={SetMouseOut}
+                 mouseHover={mouseHover}
+                 mouseOut={mouseOut}
                  text="ROMAN BLINDS" 
-                 items="item1"/>
+                 items="item2"/>
                 <GalleryItems
-                 SetMouseOver={SetMouseOver} 
-                 SetMouseOut={SetMouseOut}
+                 mouseHover={mouseHover}
+                 mouseOut={mouseOut}
                  text="ICE CRUSH" 
-                 items="item1"/>
+                 items="item3"/>
                 <GalleryItems
-                 SetMouseOver={SetMouseOver} 
-                 SetMouseOut={SetMouseOut}
+                 mouseHover={mouseHover}
+                 mouseOut={mouseOut}
                  text="LONG CRUSH" 
-                 items="item1"/>
+                 items="item4"/>
                 <GalleryItems
-                 SetMouseOver={SetMouseOver} 
-                 SetMouseOut={SetMouseOut}
+                 mouseHover={mouseHover}
+                 mouseOut={mouseOut}
                  text="BAMBOO CURTAIN" 
-                 items="item1"/>
+                 items="item5"/>
             </div>
-            <div style={mouseOver===true &&  mouseOut===false?{display:"block"}:{display:"none"}} className="gallery-cursor"></div>
+            <img src="" alt="" className="gallery-cursor" />
         </div>
     )
 }

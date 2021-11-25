@@ -1,4 +1,14 @@
-const DarkModeReducer = (state= false,action) =>{
+var darkMode
+if( localStorage.getItem("darkmode")==="off"){
+     darkMode =false
+}
+else{
+     darkMode =true
+}
+
+
+
+const DarkModeReducer = (state= darkMode,action) =>{
     switch(action.type){
         case "DARKMODE_ON":
             return state=true;

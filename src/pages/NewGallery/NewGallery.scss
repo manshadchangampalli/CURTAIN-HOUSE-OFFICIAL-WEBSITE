@@ -35,7 +35,7 @@
     .gallery-cursor{
         width: calc(100vh/3);
         height: calc(100vh/5);
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         background: #000;
