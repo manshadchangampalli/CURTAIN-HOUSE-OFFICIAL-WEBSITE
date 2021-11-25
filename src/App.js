@@ -2,6 +2,8 @@ import React ,{ useEffect, useState } from "react";
 import "./App.css";
 import Pages from "./Pages";
 import './App.scss'
+import {Provider} from "react-redux";
+import store from "./Redux/Store/Index";
 
 
 
@@ -16,9 +18,11 @@ function App() {
   head.appendChild(link);
 }
   return (
-    <div className="app">
-      <Pages/>
-    </div>
+    <Provider store={store}> 
+      <div className="app">
+        <Pages/>
+      </div>
+    </Provider>
   );
 }
 

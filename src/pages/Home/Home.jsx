@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import "./Home.scss";
 import "../../App.scss";
-import CurtainMain from "../../Components/CurtainMain";
+import CurtainMain from "../../Components/CurtainSvgForHero/CurtainMain";
 import Toggle from "../../Components/ToggleIcon/Toggle";
+import {useDispatch} from "react-redux";
+import {darkModeOff, darkModeOn} from "../../Redux/Action/Action"
+
 
 function Home(props) {
     var isDark = localStorage.getItem("darkmode")
@@ -12,6 +15,9 @@ function Home(props) {
     }else{
       isDarkFlag=true
     }
+
+
+    const dispatch = useDispatch()
 
     const [navbar, setNavbar] = useState(false)
     const [darkmode, setDarkmode] = useState(isDarkFlag)
@@ -32,9 +38,11 @@ function Home(props) {
     const darkmodeButtonCliked = ()=>{
       if(darkmode===false){
         setDarkmode(true)
+        dispatch(darkModeOn())
         localStorage.setItem("darkmode","on")
       }else{
         setDarkmode(false)
+        dispatch(darkModeOff())
         localStorage.setItem("darkmode","off")
       }
       

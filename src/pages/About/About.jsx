@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import "./About.scss";
 import {ModeContext} from '../../Components/Context'
+import {useSelector} from "react-redux";
 
 function About() {
-const mode = useContext(ModeContext)
+const mode = useSelector(state=>state.darkmode)
 const mouseover = ( ) => {
   document.getElementById("cursor").style.opacity = "0"
 }

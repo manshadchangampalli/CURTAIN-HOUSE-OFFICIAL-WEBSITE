@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "./Contact.scss";
 import { ModeContext } from "../../Components/Context";
-import MyComponent from "../../Components/Map";
+import MyComponent from "../../Components/Map/Map";
 
 
 function Contact() {
