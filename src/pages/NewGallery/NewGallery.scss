@@ -4,6 +4,7 @@
     height: 100vh;
     position: relative;
     background: white;
+    cursor: none;
     border-top: 1px solid rgba(121, 121, 121, 0.411);
     .container{
         width: 100%;
@@ -16,20 +17,36 @@
             width: 100%;
             height: 100%;
             border-bottom: 1px solid rgba(121, 121, 121, 0.411);
-            cursor: pointer;
+            // cursor: pointer;
             font-size: 2.2rem;
+            position: relative;
             padding:0 10%;
             display: grid;
             font-family: 'Fjalla One', sans-serif;
             text-align: right;
-
+           
             
             h1{
                 -webkit-text-stroke: 2px #283940;
                 color: transparent;
                 align-self: center;
+                position: absolute;
+                top: 20%;
+                z-index: 5;
+                right: 0%;
+                height: 100%;
+                width: 100vw;
+                padding-right:10% ;
+                transition: all .5s ease;
                 letter-spacing: 0.1em;
+                // transform: skew(-10deg);
             }
+            .dummy{
+                color: #283940;
+                z-index: 1;
+                transition: all .7s ease;
+            }
+            
         }
     }
     .gallery-cursor{
@@ -37,9 +54,9 @@
         height: calc(100vh/5);
         position: fixed;
         top: 0;
+        z-index: 3;
         left: 0;
-        background: #000;
-        display: none;
+        
     }
 
 }
