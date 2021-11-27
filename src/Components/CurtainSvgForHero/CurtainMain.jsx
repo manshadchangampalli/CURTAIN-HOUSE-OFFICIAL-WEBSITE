@@ -2,8 +2,17 @@ import React, { useEffect, useState } from "react";
 
 function CurtainMain() {
   const [offsetY, setOffsetY] = useState()
+  var isEnableThrottle = true
   useEffect(() => {
-    window.addEventListener("scroll",handleScroll)
+    window.addEventListener("scroll",()=>{
+      if(!isEnableThrottle)return;
+
+      handleScroll()
+      isEnableThrottle=false;
+      setTimeout(()=>{
+        isEnableThrottle=true
+      },100)
+    })
     
   }, [])
   function handleScroll(){

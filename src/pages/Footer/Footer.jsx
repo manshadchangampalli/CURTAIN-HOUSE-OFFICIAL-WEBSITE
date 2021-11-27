@@ -6,13 +6,15 @@ import {MousePointer} from "../../Redux/Action/Action";
 
 function Footer() {
   const mode = useSelector(state=>state.darkmode)
-  const dispatch = useDispatch()
-  useEffect(() => {
+
+  // its throttle flag 
+  var enableThrottle = true
+
+  // its function throttle it call after each 150 ms 
+  const onMouseMoved=(e)=>{
     var cursor = document.getElementById("cursor");
     var dummy = document.getElementById("dummy");
-    document.addEventListener("mousemove", function (e) {
-      dispatch(MousePointer(e.pageX,e.pageY))
-      var x = e.pageY;
+    var x = e.pageY;
       cursor.style.top = x - 25 + "px";
       cursor.style.left = e.pageX - 25 + "px";
       if (e.pageY < 2375) {
@@ -20,6 +22,21 @@ function Footer() {
       } else {
         dummy.style.display = "none";
       }
+  }
+
+
+  useEffect(() => {
+
+    document.addEventListener("mousemove", function (e) {
+      // dispatch(MousePointer(e.pageX,e.pageY))
+      if(!enableThrottle)return;
+      // its throttle function it call after each 150ms 
+      onMouseMoved(e)
+      enableThrottle=false
+      setTimeout(()=>{
+        enableThrottle=true
+      },150)
+      
     });
   });
   // its for the hover the socialmedia icons

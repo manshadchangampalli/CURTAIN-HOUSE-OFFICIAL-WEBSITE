@@ -171,6 +171,7 @@
           width: 300px;
           .curtain-main {
             position: absolute;
+            transition: all .5s ease;
           }
         }
         .curtain-header {
