@@ -44,7 +44,7 @@
             .dummy{
                 color: #283940;
                 z-index: 1;
-                transition: all .7s ease;
+                transition: all .5s ease;
             }
             
         }
@@ -54,6 +54,8 @@
         height: calc(100vh/5);
         position: fixed;
         top: 0;
+        mix
+        transition: all .05s ease;
         z-index: 3;
         left: 0;
         
