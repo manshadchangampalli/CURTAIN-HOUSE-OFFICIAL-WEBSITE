@@ -14,6 +14,8 @@ function NewGallery() {
     const [offsetY, setOffsetY] = useState(0)
     const [item,setItem] = useState('')
     const [removeItem,setRemoveItem] = useState(false)
+    const darkmode = useSelector(state => state.darkmode)
+
     // const {offsetX,offsetYY = useSelector(state => state.mousePointer)
     window.addEventListener('mousemove',(e)=>{
         setOffsetX(e.screenX-100)
@@ -41,10 +43,9 @@ function NewGallery() {
         img="isnull"
     }
 
-    
     return (
         // why is the new gallery means the old gallary componet design is not good or not good model
-        <div onMouseOver={()=>setRemoveItem(false)} onMouseOut={()=>setRemoveItem(true)} className="new-gallery">
+        <div onMouseOver={()=>setRemoveItem(false)} onMouseOut={()=>setRemoveItem(true)} className={darkmode?"new-gallery darkmode":"new-gallery"}>
             <div className="container">
                 <GalleryItems
                  whichOne ={item}

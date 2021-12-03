@@ -6,13 +6,12 @@ function GalleryItems({img,whichOne,mouseHover,mouseOut,items,text}) {
     const itemRef = useRef()
     var prevEvent , currentEvent;
     var isEnableThrottle = true
+
     // its a throttle function it call after each 100milli second 
     const mouseMove = (e) =>{
         if(prevEvent&&currentEvent){
             var movX = currentEvent.screenX-prevEvent.screenX
             // var movY = Math.abs(currentEvent.screenY-prevEvent.screenY)
-            
-
             if(movX/4>20){
                 setSkewX(20)
             }else if(movX/4<-20){
@@ -20,7 +19,7 @@ function GalleryItems({img,whichOne,mouseHover,mouseOut,items,text}) {
             }else{
                 setSkewX(movX)
             }
-
+            
         }
         prevEvent=currentEvent
     }
