@@ -213,16 +213,16 @@
             "email"
             "msg "
             "btn ";
-          .fname {
-          }
-          .lname {
-          }
-          .email {
-          }
-          .msg {
-          }
-          .btn {
-          }
+          // .fname {
+          // }
+          // .lname {
+          // }
+          // .email {
+          // }
+          // .msg {
+          // }
+          // .btn {
+          // }
         }
       }
     }
@@ -232,6 +232,10 @@
   }
   .nav-items-footer p {
     margin: 0 10px;
+  }
+  .new-gallery .container .items h1 {
+    font-size: 40px;
+    margin-top: 23px;
   }
 }
 
@@ -286,7 +290,15 @@
   .footer {
     height: 150px;
   }
+  .new-gallery .container .items h1{
+    font-size: 30px;
+    -webkit-text-stroke: 1px #283940; 
+  }
+  .new-gallery.darkmode .container .items h1 {
+    -webkit-text-stroke: 1px #6e8892;
 }
+}
+
 
 // its for the mobiles which width is less than 380
 
@@ -324,6 +336,7 @@
   .contact-box-form{
     border-radius:0px;
   }
+  
   
 }
 

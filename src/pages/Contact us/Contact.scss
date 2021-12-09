@@ -70,9 +70,11 @@
         input,
         textarea {
           padding-left: 15px;
+          min-height: 30px;
         }
         textarea {
           padding-top: 15px;
+          height: auto;
           font-size: 20px;
         }
         .fname {
@@ -93,6 +95,7 @@
           background: #1a5267;
           outline: none;
           border: none;
+          min-height: 30px;
           color: white;
           box-shadow: 1px 1px 5px 0 #000;
           &:hover{
