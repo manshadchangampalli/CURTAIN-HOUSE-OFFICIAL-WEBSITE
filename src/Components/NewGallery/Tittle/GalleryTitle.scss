@@ -1,0 +1,14 @@
+.gallery-heading-animation{
+    width: 100vw;
+    height: 100px;
+    padding-bottom: 10px;
+    padding-right: 10%;
+    background: #000;
+    display: grid;
+    align-items: end;
+    justify-content: end;
+    overflow: hidden;
+    img{
+        height:50px;
+    }
+}
